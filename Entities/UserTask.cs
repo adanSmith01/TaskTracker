@@ -18,7 +18,7 @@ public class UserTask
 
     public string Description { get; set;}
 
-    public State state{ get; set;}
+    public State StateTask{ get; set;}
 
     public DateTime CreatedAt { get; set;}
     
