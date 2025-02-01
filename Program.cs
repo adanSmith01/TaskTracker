@@ -6,7 +6,7 @@ internal class Program
 {
     const string SPLIT_PATTERN = @"(\"".*?\"")|\S+";
     const string CREATE_OPERATION = "create";
-    const string CREATE_PATTERN = @"^create\s""(.*)""\s--state\s[0-2]$";
+    const string CREATE_PATTERN = @"^create ""(.*)"" --state [0-2]$";
 
     private static void Main(string[] args)
     {
@@ -19,7 +19,7 @@ internal class Program
                 printInitialLine();
                 IUserTaskService _userTaskService = new UserTaskService("userTasks.json");
                 command = Console.ReadLine();
-                executeComand(command, _userTaskService);
+                //executeComand(command, _userTaskService);
             }while(!commandIsValid(command));
 
             Console.WriteLine("In Progress...");
